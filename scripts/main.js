@@ -65,6 +65,21 @@ function getSum(a, b) {
 console.log(getSum(2, 2));
 
 //Task 6
+function foo() {
+    console.log('foo');
+}
+function boo() {
+    console.log('boo');
+}
+function fooBoo(isTrue, funcOne, funcTwo) {
+    if(isTrue) {
+        funcOne();
+    }
+    else {
+        funcTwo();
+    }
+}
+fooBoo(false, foo, boo);
 
 //Advanced
 //Task 1
