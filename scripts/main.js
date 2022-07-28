@@ -107,3 +107,51 @@ function chocoDiv(n, m) {
     
 }
 console.log(chocoDiv(2, 1));
+
+//Task 3
+// new IntlNumberFormat('en-In', { maximumSignificantDigits: 2 }, { style: 'currency', currency: 'USD' }).format(commonPrice(500, 100, 0.15))
+const taxRate = 0.15;
+const phonePrice = 500;
+const accPrice = 100;
+let moneyBalance = 5000;
+
+//считает налог
+function totalPrice() {
+    let sum = 0;
+    let tax= (phonePrice + accPrice) * taxRate;
+    sum += phonePrice + accPrice + tax;
+    return sum;
+}
+totalPrice();
+
+//форматирует и выводит баланс
+let balanceForm = new Intl.NumberFormat("en", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 2
+});
+console.log(balanceForm.format(moneyBalance));
+
+//форматирует сумму покупки
+    let totalPriceForm = new Intl.NumberFormat("en", {
+        style: "currency",
+        currency: "USD",
+        minimumFractionDigits: 2
+    });
+console.log(totalPriceForm.format(totalPrice()));
+
+// function checkBalance() {
+//     if(totalPrice() <= moneyBalance) {
+//         return true;
+//     }
+//     else {
+//         return false;
+//     }
+// }
+// console.log(checkBalance());
+
+function buyPhone() {
+    
+}
+console.log(buyPhone());
+
