@@ -6,7 +6,13 @@ function getSum(n) {
     }
     return sum;
 }
-console.log( getSum(100) );
+console.log( getSum(100));
+
+//variant 2
+function getSum(n) {
+    return n * (n + 1) / 2;
+}
+console.log(getSum(100));
 
   //Task 2
 function creditOverpay(a) {
