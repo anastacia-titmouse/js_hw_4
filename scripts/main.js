@@ -94,3 +94,16 @@ function triangle(a, b, c) {
 console.log(triangle(5, 5, 5));
 
 //Task 2
+function chocoDiv(n, m) {
+    const i = 1;
+    let sum = 0;
+    if(n > 0 && m > 0){
+        sum += (n - 1) + (m - 1);
+        return sum;
+    }
+    else {
+        return 0;
+    }
+    
+}
+console.log(chocoDiv(2, 1));
